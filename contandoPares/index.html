@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contando de 1 a 10 (mostrando só os pares)</title>
+    <style> 
+        body{
+            font: 15px arial;
+        }
+        #bnt{
+            padding: 30px;
+            background: rgb(71, 158, 71);
+            color: aliceblue;
+            font: 15px arial;
+        }
+        #limpar{
+            padding: 30px;
+            background: rgb(201, 4, 4);
+            color: aliceblue;
+            font: 15px arial;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <h1>Contando de 1 a 10 (mostrando só os pares)</h1>
+    <input type="button" value="contar" id="bnt" onclick="contar()"> 
+    <input id="limpar" type="button" value="limpar" onclick="limpar()" > <br>
+
+    <p>  
+        quer contar até quanto: <input type="number" id="num">
+    </p>
+   
+
+    <p>Aperte o botão acima para contar</p>
+    <p id="res"></p>
+
+    <script src="index.js"></script>
+</body>
+</html>
