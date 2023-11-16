@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Checkboxes</title>
+</head>
+<body>
+    <h2>Exemplo de Checkboxes</h2>
+    
+    <label>
+        <input type="checkbox" id="checkbox1"> Checkbox 1
+    </label>
+    
+    <label>
+        <input type="checkbox" id="checkbox2"> Checkbox 2
+    </label>
+
+    <label>
+        <input type="checkbox" id="checkbox3"> Checkbox 3
+    </label>
+
+    <script>
+        // Exemplo de JavaScript para verificar se os checkboxes estão marcados ou desmarcados
+        var checkbox1 = document.getElementById("checkbox1");
+        var checkbox2 = document.getElementById("checkbox2");
+        var checkbox3 = document.getElementById("checkbox3");
+
+        checkbox1.addEventListener('change', function() {
+            if (checkbox1.checked) {
+                alert('Checkbox 1 está marcado');
+            } else {
+                alert('Checkbox 1 está desmarcado');
+            }
+        });
+
+        checkbox2.addEventListener('change', function() {
+            if (checkbox2.checked) {
+                alert('Checkbox 2 está marcado');
+            } else {
+                alert('Checkbox 2 está desmarcado');
+            }
+        });
+
+        checkbox3.addEventListener('change', function() {
+            if (checkbox3.checked) {
+                alert('Checkbox 3 está marcado');
+            } else {
+                alert('Checkbox 3 está desmarcado');
+            }
+        });
+    </script>
+</body>
+</html>
