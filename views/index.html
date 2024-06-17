@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="../public/styles.css">
+    <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+</head>
+<body style="background-color: rgb(7, 7, 180);">
+    <div class="main" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 500px; width: 500px; background: rgb(29, 125, 209); margin: 50px auto; border-radius: 10px;"  >
+        <h1 >Task List</h1 >
+            <ul id="task-list">
+                <% tasks.forEach(task => { %>
+                    <%- include('task', { task: task }) %>
+                <% }); %>
+            </ul>
+            <form hx-post="/add_task" hx-swap="beforeend:#task-list" hx-target="#task-list">
+
+                <input style="padding: 5px; border-radius: 10px; margin-top: 30px; border: none;" type="text" name="task" required placeholder="adicionar tarefa">
+
+                <button style="border: none ; padding: 5px 15px ; border-radius: 10px;background: #2cbde9;;" type="submit">Adiconar</button>
+            </form>
+    </div>
+   
+</body>
+</html>
